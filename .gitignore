@@ -1,0 +1,8 @@
+# ignore all the svg files
+*.svg
+
+# ignore all the png files
+*.png
+
+# ignore all the txt files
+*.txt
