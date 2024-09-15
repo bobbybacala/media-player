@@ -1,0 +1,69 @@
+
+/* for the utilites of CSS */
+/* these classes can be used in any elements */
+
+.border{
+    border: red 2px solid;
+    margin: 3px;
+}
+
+.margin{
+    margin: 3px;
+}
+
+/* flex box */
+.flex{
+    display: flex;
+}
+
+/* left and right */
+.justify-center{
+    justify-content: center;
+}
+
+/* top and bottom */
+.items-center{
+    align-items: center;
+}
+
+.bg-blk{
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+.bg-grey{
+    background-color: #121212;
+    /* background-color: #863737; */
+}
+
+.rounded-brd{
+    border-radius: 10px;
+}
+
+.m-1{
+    margin: 5px;
+}
+
+.p-1{
+    padding: 10px;
+}
+
+.spread{
+    justify-content: space-between;
+}
+
+.bold{
+    font-weight: 900;
+}
+
+.width100{
+    width: 100%;
+}
+
+/* an important utils class, that fills the seekbar, as the songs goes on */
+.fill-bar{
+    width: 0%;
+    height: 100%;
+    background-color: white;
+    border-radius: 5px;
+}

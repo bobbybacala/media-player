@@ -1,0 +1,503 @@
+/* importing the font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+.left {
+    width: 27vw;
+    padding: 10px 0;
+}
+
+.close-left {
+    display: none;
+}
+
+.right {
+    width: 73vw;
+    /* padding: 10px; */
+    margin: 15px 0;
+    margin-right: 5px;
+
+    /* position relative */
+    position: relative;
+
+    align-items: center;
+    /* Centers horizontally */
+
+}
+
+.home ul li {
+    /* style */
+    width: 25px;
+    list-style: none;
+    padding-top: 15px;
+    margin-left: 2px;
+
+    /* display */
+    display: flex;
+    gap: 17px;
+}
+
+.invert {
+    filter: invert();
+}
+
+.library {
+    min-height: 70vh;
+    position: relative;
+}
+
+.heading {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+
+    padding-top: 15px;
+    margin-left: 2px;
+    width: 100%;
+}
+
+.heading img {
+    width: 25px;
+}
+
+.footer {
+    display: flex;
+    gap: 13px;
+    font-size: 10px;
+    padding: 20px 10px;
+
+    position: absolute;
+    bottom: 5px;
+}
+
+.footer a {
+    color: gray;
+    text-decoration: none;
+}
+
+.nav {
+    margin-left: 10px;
+    gap: 25px;
+}
+
+.nav img {
+    width: 20px;
+}
+
+.hamburger {
+    display: none;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+
+    /* background-color: rgb(102, 102, 102); */
+    /* background-color: rgb(48, 48, 48); */
+}
+
+/* used to access direct children elements under header*/
+.header>* {
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.spotifyPlaylists {
+    padding: 15px;
+}
+
+.cardContainer {
+    margin: 2px;
+    padding: 0px;
+
+    /* display setting */
+    max-height: 70vh;
+    overflow-y: auto;
+    display: flex;
+    /* wraps the contents when the resolution of the screen is changed */
+    flex-wrap: wrap;
+}
+
+
+.spotifyPlaylists .playListcard {
+    /* max-width: 250px; */
+    width: 160px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 1s;
+}
+
+/* give all the immediate child of card a padding of 10px */
+.playListcard>* {
+    padding-top: 8px;
+}
+
+.spotifyPlaylists .playListcard img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.spotifyPlaylists .playListcard p {
+    font-size: 13px;
+    color: grey;
+}
+
+.card-img {
+    position: relative;
+}
+
+.play {
+    width: 50px;
+}
+
+.card-img .play {
+    /* initialy set the play button on playlist card to right 0, and transition for 0.5s , so that upon hover we get a sliding effect */
+    position: absolute;
+    bottom: 8px;
+    right: 0px;
+
+    transition: all 0.5s;
+
+    opacity: 0;
+}
+
+.playListcard:hover {
+    cursor: pointer;
+    background-color: #252525;
+
+    .card-img .play {
+        position: absolute;
+        bottom: 8px;
+        right: 8px;
+
+        opacity: 1;
+    }
+}
+
+
+/* Styling the scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #202020;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #404040;
+    border: 2px solid #202020;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #606060;
+}
+
+/* Scroll bar styling */
+
+/* sign up and login buttons */
+.buttons {
+    margin-right: 15px;
+
+    display: flex;
+    gap: 20px;
+}
+
+.signup-btn {
+    /* font-size: 16px; */
+    border: none;
+    outline: none;
+    background-color: #121212;
+    color: rgb(77, 77, 77);
+}
+
+.signup-btn:hover {
+    color: #fff;
+    /* font-size: 17px; */
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.login-btn {
+    color: #353535;
+    width: 80px;
+    /* font-size: 16px; */
+    border: none;
+    border-radius: 20px;
+    padding: 10px 10px;
+    outline: none;
+}
+
+.login-btn:hover {
+    color: black;
+    transform: scale(1.05);
+    /* Slightly enlarge the button without affecting the layout */
+    /* transition: transform 0.2s , background-color 0.2s , color 0.2s; */
+    width: 85px;
+    cursor: pointer;
+}
+
+.playbar {
+    width: 97%;
+    height: 60px;
+
+    /* position */
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translate(-50%);
+
+    /* display */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* this sets the song buttons to the top of the playbar */
+
+    background-color: #353535;
+    border-radius: 30px;
+    margin: 5px;
+}
+
+.playbar img {
+    width: 20px;
+}
+
+
+.songButtons {
+    /* display */
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+    padding: 10px;
+
+}
+
+/* all the child of songbuttons */
+.songButtons>* {
+    cursor: pointer;
+}
+
+.songButtons img {
+    width: 22px;
+}
+
+.time-vol{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.time-vol #volume{
+    cursor: pointer;
+}
+
+.songlist {
+    margin: 10px 0;
+    height: 300px;
+    overflow: auto;
+}
+
+.songlist ul {
+    padding: 15px 5px;
+}
+
+.songlist ul li {
+    border: #606060 solid 2px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    padding: 10px 5px;
+    font-size: 14px;
+
+    list-style: none;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+
+    align-items: center;
+    /* Ensure vertical alignment */
+    overflow: hidden;
+    /* Prevent overflow of contents */
+
+    cursor: pointer;
+}
+
+.songlist ul li:hover {
+    background-color: #252525;
+}
+
+.songlist ul li:active {
+    background-color: #959595;
+}
+
+.music-logo {
+    width: 25px;
+}
+
+.info {
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    /* Let the info take available space */
+    min-width: 0;
+    /* Allow content to shrink within the available space */
+
+    /* overflow: auto; */
+}
+
+.playnow {
+    font-size: 12px;
+    /* border: 1px solid white; */
+    width: 100px;
+
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+.playnow img {
+    width: 30px;
+}
+
+.seekbar {
+    width: 95%;
+    border: 1px solid white;
+    border-radius: 5px;
+    height: 2px;
+
+    /* to get the circle in the seekbar to the center */
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.seekbar:hover {
+    cursor: pointer;
+}
+
+.circle {
+    width: 10px;
+    height: 10px;
+    border: 2px solid white;
+    border-radius: 50%;
+    background-color: white;
+
+    /* postion of the circle on the seekbar, tells us how much time song has been played*/
+    /* when the song is playing, the duration changes as songs plays, therefore we have to move the circle, hence we move the position attribute 'left' */
+    position: absolute;
+    left: 0%;
+    transform: translate(-50%);
+
+    /* transition to move the circle smoothly */
+    transition: left 0.1s ease-in-out;
+}
+
+.pause-svg {
+    width: 18px;
+}
+
+.abovebar {
+    width: 95%;
+
+    /* display */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* to make the page responsive */
+@media (max-width: 1000px) {
+
+    .left {
+        /* border: 1px solid red; */
+        width: 400px;
+        width: auto;
+        background-color: black;
+        padding: 0;
+
+        /* position */
+        z-index: 1;
+        position: absolute;
+        left: -110%;
+
+        transition: 0.7s ease;
+    }
+
+    .right {
+        width: 100vw;
+        height: 87.5vh;
+        margin: 15px 5px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .left .close-left {
+        display: block;
+        width: 22px;
+        position: absolute;
+        top: 25px;
+        right: 25px;
+    }
+
+    .playbar {
+        font-size: 14px;
+        position: fixed;
+        bottom: 20px;
+        padding: 8px 0;
+
+        height: fit-content;
+    }
+
+    .cardContainer {
+        margin: 0;
+        justify-content: center;
+        width: 80vw;
+    }
+
+    .cardContainer .playListcard {
+        width: 220px;
+    }
+
+    .abovebar {
+        flex-direction: column;
+        gap: 5px;
+
+        align-items: center;
+    }
+
+    .seekbar {
+        margin-top: 8px;
+    }
+
+    .songlist ul li {
+        word-wrap: break-word;
+        word-break: break-all;
+    }
+}
+
+@media (max-width: 470px){
+    .playListcard{
+        width: 90vw;
+    }
+
+    .cardContainer{
+        padding: 0;
+    }
+}
