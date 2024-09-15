@@ -12,6 +12,7 @@
    <Artist Name> - <Song Name>
 
 2. **info.json**: This file contains metadata about the playlist. Its structure is as follows:
+   ```json
    {
     "description": "Dance to the sounds of West",
     "cover": "coverPic.jpg"
